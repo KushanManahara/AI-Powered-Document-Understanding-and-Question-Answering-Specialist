@@ -55,7 +55,7 @@ def chunks(iterable, batch_size=100):
         chunk = tuple(itertools.islice(it, batch_size))
 
 
-# Example generator that generates many (id, vector) pairs
+# Generator that generates many (id, vector) pairs
 data_generator = map(
     lambda i: (f"id-{i}", [random.random() for _ in range(vector_dim)]),
     range(vector_count),
